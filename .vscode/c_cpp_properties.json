@@ -1,0 +1,25 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/atharva/amogh_ros_ws/install/sbg_driver/include/**",
+        "/home/atharva/amogh_ros_ws/install/dvl_msgs/include/**",
+        "/home/atharva/ros2_ws/install/sbg_driver/include/**",
+        "/opt/ros/humble/include/**",
+        "/home/atharva/ros2_ws/sbg_ros2_driver/include/**",
+        "/home/atharva/ros2_ws/src/my_work_cv/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

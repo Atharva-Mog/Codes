@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Run Terminal Scripts</title>
+    <script>
+        function runScript(scriptName) {
+            fetch(`/run_script/${scriptName}`)
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'success') {
+                    document.getElementById('output').textContent = data.output;
+                } else {
+                    document.getElementById('output').textContent = 'Error: ' + data.output;
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <h1>Available Scripts</h1>
+    <div>
+        <!-- Flask will inject script buttons here -->
+        {% for script in scripts %}
+        <button onclick="runScript('{{ script }}')">{{ script }}</button>
+        {% endfor %}
+    </div>
+
+    <h2>Output:</h2>
+    <pre id="output"></pre>
+</body>
+</html>
